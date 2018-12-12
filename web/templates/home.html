@@ -1,0 +1,114 @@
+<!-- Home -->
+<div class="container-viewport container-viewport--full valign-wrapper">
+
+    <div class="width-full">
+
+        <div class="container">
+
+            <!-- SMPLBLCK Logo -->
+            <div class="padding-top-double text-center">
+
+                <a href="http://thesimpleblack.com/" target="_blank">
+                    <img class="home-logo" src="images/marca_SB.png"/>
+                </a>
+
+            </div>
+            <!-- end SMPLBLCK Logo -->
+
+        </div>
+
+        <div class="z-depth-1 bg-color-black-lighten-2 margin-vertical-double padding-vertical-full">
+
+            <h1 class="font-transform-italic text-center font-size-giant--2">
+                <span class="font-weight-thin hide-on-med-and-down font-color-white">SMPLBLCK/</span><strong
+                    class="font-color-white">Classify</strong>
+            </h1>
+
+            <p class="font-size-n text-center font-color-white-darken-4">
+                SMPLBLCK CSS Framework
+            </p>
+
+        </div>
+
+        <div class="container">
+
+            <p class="text-center font-size-l">
+                This is the SMPLBLCK base front-end CSS framework. With this framework, we can start building any web or
+                hybrid app in a blink of an eye.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container padding-vertical-half">
+
+    <!-- Content index -->
+    <div class="row">
+
+        <a href="#/info/{{content.link}}" ng-repeat="content in data.index">
+
+            <div class="col l12 margin-bottom-full">
+
+                <!-- Card -->
+                <div class="card bg-color-white">
+
+                    <div class="card__title font-color-generic-blue bg-color-white-darken-2">
+                        <h5 class="valign-wrapper font-size-l">
+                            <i class="material-icons font-size-n padding-right-quarter">{{content.icon}}</i>
+                            {{content.name}}
+                        </h5>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="card__content">
+
+                        <p class="font-size-n font-weight-thin">
+                            {{content.description}}
+                        </p>
+
+                    </div>
+                    <!-- end Card content -->
+
+                </div>
+                <!-- end Card -->
+
+            </div>
+
+        </a>
+
+    </div>
+    <!-- end Content index -->
+
+    <div class="text-center margin-vertical-double">
+
+        <h2>
+            Tests
+        </h2>
+
+        <div class="valign-wrapper valign-space-around">
+            <a href="#/test_01" class="button button-color-generic-blue">
+                Test 1
+            </a>
+        </div>
+
+    </div>
+
+    <div class="text-center margin-vertical-double">
+
+        <h2>
+            Playground
+        </h2>
+
+        <div class="valign-wrapper valign-space-around">
+            <a href="#/playground" class="button button-color-generic-blue">
+                Enter playground
+            </a>
+        </div>
+
+    </div>
+
+</div>
+<!-- end Home -->

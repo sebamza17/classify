@@ -1,0 +1,25 @@
+{
+  "name": "classify",
+  "description": "",
+  "main": "web/index.index.html",
+  "authors": [
+    "sebamza17"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "web/index.html",
+  "private": true,
+  "ignore": [],
+  "dependencies": {
+    "angular": "1.5.8",
+    "angular-route": "1.5.8",
+    "angular-i18n": "1.5.8",
+    "jquery": "^3.1.0",
+    "angular-animate": "1.5.8"
+  },
+  "resolutions": {
+    "angular": "1.5.8"
+  }
+}

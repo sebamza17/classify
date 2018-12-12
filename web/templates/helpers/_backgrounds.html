@@ -1,0 +1,332 @@
+<div class="padding-full margin-bottom-double bg-color-white">
+
+    <h3>
+        Background helpers
+    </h3>
+
+    <p class="font-size-l margin-none">
+        Classify counts with multiple classes that defines colors and styles.
+        Also counts with multiple variation classes. that modifies each color with 20 shade variations.
+    </p>
+
+    <!-- Base values -->
+    <div class="row padding-top-full margin-bottom-none">
+
+        <div class="col l12 margin-bottom-half">
+            <h4 class="">
+                Values
+            </h4>
+        </div>
+
+        <div class="bg-color-white-darken-2">
+
+            <div class="row padding-full">
+
+                <div class="col s12 m12 l4">
+                    <div class="padding-vertical-half padding-horizontal-quarter text-center bg-color-white z-depth-1">
+                        <span class="font-color-black">.bg-color-white</span>
+                    </div>
+                </div>
+
+                <div class="col s12 m12 l4">
+                    <div class="padding-vertical-half padding-horizontal-quarter text-center bg-color-black z-depth-1">
+                        <span class="font-color-white">.bg-color-black</span>
+                    </div>
+                </div>
+
+                <div class="col s12 m12 l4">
+                    <div class="padding-vertical-half padding-horizontal-quarter text-center bg-color-transparent z-depth-1">
+                        <span class="font-color-black">.bg-color-transparent</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- end Base values -->
+
+    <div class="horizontal-separator"></div>
+
+    <div class="row padding-top-full margin-bottom-none">
+
+        <div class="col l12 margin-bottom-half">
+            <h4 class="">
+                Values variations
+            </h4>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="col s12 m6">
+
+            <div ng-repeat="i in getNumber(data.shadeQuantity) track by $index"
+                 class="padding-vertical-half padding-horizontal-quarter text-center bg-color-black-lighten-{{$index + 1}}">
+                <span ng-class="{'font-color-white': $index + 1 <= 10, 'font-color-black': $index + 1 > 10}">
+                    .bg-color-black-lighten-{{$index + 1}}
+                </span>
+            </div>
+
+        </div>
+
+        <div class="col s12 m6">
+
+            <div ng-repeat="i in getNumber(data.shadeQuantity) track by $index"
+                 class="padding-vertical-half padding-horizontal-quarter text-center bg-color-white-darken-{{$index + 1}}">
+                <span ng-class="{'font-color-black': $index + 1 <= 10, 'font-color-white': $index + 1 > 10}">
+                    .bg-color-white-darken-{{$index + 1}}
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="horizontal-separator"></div>
+
+    <!-- Base colors -->
+    <div class="row padding-top-full margin-bottom-none">
+
+        <div class="col l12 margin-bottom-half">
+
+            <h4 class="">
+                Base color
+            </h4>
+
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="col s12 m3">
+            <div class="padding-vertical-half padding-horizontal-quarter text-center bg-color-generic-blue z-depth-1">
+                <span class="font-color-black">.bg-color-generic-blue</span>
+            </div>
+        </div>
+
+        <div class="col s12 m3">
+            <div class="padding-vertical-half padding-horizontal-quarter text-center bg-color-generic-red z-depth-1">
+                <span class="font-color-white">.bg-color-generic-red</span>
+            </div>
+        </div>
+
+        <div class="col s12 m3">
+            <div class="padding-vertical-half padding-horizontal-quarter text-center bg-color-generic-green z-depth-1">
+                <span class="font-color-black">.bg-color-generic-green</span>
+            </div>
+        </div>
+
+        <div class="col s12 m3">
+            <div class="padding-vertical-half padding-horizontal-quarter text-center bg-color-generic-orange z-depth-1">
+                <span class="font-color-black">.bg-color-generic-orange</span>
+            </div>
+        </div>
+
+    </div>
+    <!-- end Base colors -->
+
+    <div class="horizontal-separator"></div>
+
+    <!-- Variations -->
+    <div class="row padding-top-full margin-bottom-none">
+
+        <div class="col l12 margin-bottom-half">
+
+            <h4 class="">
+                Brand color variations
+            </h4>
+
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="col s12 m3">
+
+            <div ng-repeat="i in getNumber(data.brandShadeQuantity) track by $index"
+                 class="padding-vertical-half padding-horizontal-quarter text-center bg-color-generic-blue-lighten-{{$index + 1}}">
+                <span class="font-color-black">
+                    .bg-color-generic-blue-lighten-{{$index + 1}}
+                </span>
+            </div>
+
+            <div ng-repeat="i in getNumber(data.brandShadeQuantity) track by $index"
+                 class="padding-vertical-half padding-horizontal-quarter text-center bg-color-generic-blue-darken-{{$index + 1}}">
+                <span class="font-color-white">
+                    .bg-color-generic-blue-darken-{{$index + 1}}
+                </span>
+            </div>
+
+        </div>
+
+        <div class="col s12 m3">
+
+            <div ng-repeat="i in getNumber(data.brandShadeQuantity) track by $index"
+                 class="padding-vertical-half padding-horizontal-quarter text-center bg-color-generic-red-lighten-{{$index + 1}}">
+                <span class="font-color-black">
+                    .bg-color-generic-red-lighten-{{$index + 1}}
+                </span>
+            </div>
+
+            <div ng-repeat="i in getNumber(data.brandShadeQuantity) track by $index"
+                 class="padding-vertical-half padding-horizontal-quarter text-center bg-color-generic-red-darken-{{$index + 1}}">
+                <span class="font-color-white">
+                    .bg-color-generic-red-darken-{{$index + 1}}
+                </span>
+            </div>
+
+        </div>
+
+        <div class="col s12 m3">
+
+            <div ng-repeat="i in getNumber(data.brandShadeQuantity) track by $index"
+                 class="padding-vertical-half padding-horizontal-quarter text-center bg-color-generic-green-lighten-{{$index + 1}}">
+                <span class="font-color-black">
+                    .bg-color-generic-green-lighten-{{$index + 1}}
+                </span>
+            </div>
+
+            <div ng-repeat="i in getNumber(data.brandShadeQuantity) track by $index"
+                 class="padding-vertical-half padding-horizontal-quarter text-center bg-color-generic-green-darken-{{$index + 1}}">
+                <span class="font-color-black">
+                    .bg-color-generic-green-darken-{{$index + 1}}
+                </span>
+            </div>
+
+        </div>
+
+        <div class="col s12 m3">
+
+            <div ng-repeat="i in getNumber(data.brandShadeQuantity) track by $index"
+                 class="padding-vertical-half padding-horizontal-quarter text-center bg-color-generic-orange-lighten-{{$index + 1}}">
+                <span class="font-color-black">
+                    .bg-color-generic-orange-lighten-{{$index + 1}}
+                </span>
+            </div>
+
+            <div ng-repeat="i in getNumber(data.brandShadeQuantity) track by $index"
+                 class="padding-vertical-half padding-horizontal-quarter text-center bg-color-generic-orange-darken-{{$index + 1}}">
+                <span class="font-color-white">
+                    .bg-color-generic-orange-darken-{{$index + 1}}
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- end Variations -->
+
+    <div class="horizontal-separator"></div>
+
+    <!-- Image as background helpers -->
+    <div class="col m12">
+
+        <div class="">
+
+            <h4 class="">
+                Image background helpers
+            </h4>
+
+            <p>
+                These classes will help you work with any element with <code>background-image</code> attribute. 
+                They can be used to avoid the <code>img</code> tag. You can change size and position of your background image. <br/>
+                You can see an example of these classes in a "real-life" use <a ng-href="#/examples/_bg_cover" target="_blank">here</a>
+            </p>
+
+            <div class="padding-double bg-structure-cover text-center" style="background-image: url('images/example_3.jpg'); ">
+
+                <h4 class="display-inline-block bg-color-black-opacity-4 padding-half font-color-white font-shadow-s margin-vertical-double text-center">
+                    This div has a <code>.bg-structure-cover</code> image
+                </h4>
+
+            </div>
+
+            <div class="padding-double bg-structure-center margin-top-full text-center" style="background-image: url('images/example_3.jpg'); ">
+
+                <h4 class="display-inline-block bg-color-black-opacity-4 padding-half font-color-white font-shadow-s margin-vertical-double text-center">
+                    This div has a <code>.bg-structure-center</code> image
+                </h4>
+
+            </div>
+
+            <div class="padding-double bg-structure-cover bg-structure-center margin-top-full text-center" style="background-image: url('images/example_3.jpg'); ">
+
+                <h4 class="display-inline-block bg-color-black-opacity-4 padding-half font-color-white font-shadow-s margin-vertical-double text-center">
+                    This div has a <code>.bg-structure-center.bg-structure-cover</code> image
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- end Image as background helpers -->
+
+    <div class="horizontal-separator"></div>
+
+    <!-- Image as background helpers -->
+    <div class="col m12">
+
+        <div class="">
+
+            <h4 class="">
+                Background blend modes
+            </h4>
+
+            <p>
+                Another feature that Classify adds (with easy-to-use classes) are background blend modes and element blend modes. You can
+                see a complete example <a href="#/examples/_blend_modes">here</a>
+                <br />
+                Try changing the color selector to see how each color affects the image differently with each blend mode
+            </p>
+
+            <div class="padding-half bg-color-white-darken-2">
+                <div class="row">
+                    <div class="col l4 m12 s12">
+                        <label class="font-size-n">Red channel <code>{{data.channelRed}}</code></label>
+                        <p class="range-field margin-none">
+                            <input type="range" id="test6" min="0" max="255" value="{{data.channelRed}}" ng-model="data.channelRed" />
+                        </p>
+                    </div>
+                    <div class="col l4 m12 s12">
+                        <label class="font-size-n">Green channel <code>{{data.channelGreen}}</code></label>
+                        <p class="range-field margin-none">
+                            <input type="range" id="test7" min="0" max="255" value="{{data.channelGreen}}" ng-model="data.channelGreen" />
+                        </p>
+                    </div>
+                    <div class="col l4 m12 s12">
+                        <label class="font-size-n">Blue channel <code>{{data.channelBlue}}</code></label>
+                        <p class="range-field margin-none">
+                            <input type="range" id="test8" min="0" max="255" value="{{data.channelBlue}}" ng-model="data.channelBlue" />
+                        </p>
+                    </div>
+                    <div class="col l12 m12 s12">
+                        <label class="font-size-n">Alpha (opacity) <code>{{data.channelAlpha}}%</code></label>
+                        <p class="range-field margin-none">
+                            <input type="range" id="test8" min="0" max="100" value="{{data.channelAlpha}}" ng-model="data.channelAlpha" />
+                        </p>
+                    </div>
+                </div><div class="padding-full valign-wrapper valign-center" style="background-color: rgba({{data.channelRed}}, {{data.channelGreen}}, {{data.channelBlue}}, {{data.channelAlpha / 100}});">
+                    Sample color
+                </div>
+            </div>
+
+            <div class="row padding-top-full">
+
+                <div class="col l4 m12 s12 margin-bottom-half" ng-repeat="blendMode in data.blendModes">
+
+                    <div class="padding-quarter bg-color-white-darken-2 text-center">.{{blendMode.name}}</div>
+
+                    <div class="bg-blend-example image-ratio image-ratio-4-3 bg-structure-cover bg-structure-center valign-wrapper valign-center position-relative" style="background-image: url('images/example_1.jpg');">
+                        <div style="background-color: rgba({{data.channelRed}}, {{data.channelGreen}}, {{data.channelBlue}}, {{data.channelAlpha / 100}});" class="{{blendMode.name}} position-absolute height-full width-full"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- end Image as background helpers -->
+
+    </div>
+
+</div>

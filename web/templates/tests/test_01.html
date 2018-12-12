@@ -1,0 +1,75 @@
+<!-- Test header -->
+<div class="z-depth-1 padding-full bg-color-white margin-bottom-double text-center">
+
+    <a href="#/home" class="font-color-black font-transform-italic text-center font-size-giant">
+        <span class="font-weight-thin">SMPLBLCK/</span><strong>Classify</strong>
+    </a>
+
+    <p class="font-size-xl text-center">
+        Learning test 101
+    </p>
+
+</div>
+<!-- end Test header -->
+
+<!-- Test container -->
+<div class="container">
+
+    <!-- Question -->
+    <div class="question"
+         ng-class="{'is-correct': question.status === 'correct', 'is-incorrect': question.status === 'incorrect'}"
+         ng-repeat="question in test1.questions track by $index">
+
+        <!-- Title -->
+        <div class="question-title">
+
+            Pregunta {{$index + 1}}
+
+        </div>
+        <!-- end Title -->
+
+        <!-- Container -->
+        <div class="question-container">
+
+            <blockquote class="question-quote">
+                {{question.question}}
+            </blockquote>
+
+            <!-- Html example -->
+            <div class="question-html" ng-bind-html="question.htmlExample"></div>
+            <!-- end Html example -->
+
+            <!-- Options -->
+            <div class="valign-wrapper valign-space-around">
+                <a class="button button-color-brand-blue text-center"
+                   ng-repeat="option in question.options track by $index"
+                   ng-click="answerQuestion($parent.$index, option.isCorrect)">
+                    {{option.option}}
+                </a>
+            </div>
+            <!-- end Options -->
+
+        </div>
+        <!-- end Container -->
+
+    </div>
+    <!-- end Question -->
+
+</div>
+<!-- end Test container -->
+
+<!-- Playground 
+<div class="padding-vertical-double bg-color-white">
+
+    <div class="container">
+
+        <h3>Let's test what we already know</h3>
+        <p class="font-size-n">
+            Select each item and add classes to complete each exercise
+        </p>
+        
+        <playground></playground>
+        
+    </div>
+</div>
+end Playground -->

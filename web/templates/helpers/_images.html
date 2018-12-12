@@ -1,0 +1,142 @@
+<!-- Image helpers -->
+<div class="padding-full margin-bottom-double bg-color-white">
+
+    <h2>
+        Image helpers
+    </h2>
+
+    <p class="font-size-l margin-none">
+        Classify implement a series of image helpers.
+    </p>
+
+    <div class="row margin-bottom-none padding-top-full">
+
+
+        <!-- Image ratio example -->
+        <div class="col m12">
+
+            <h4 class="">
+                Image ratio helpers
+            </h4>
+            <p>
+                These helper classes will aid you when in need of maintaining a certain aspect ratio on your images. It takes advantages
+                of the <code>:before</code> pseudoelement and <code>background-size: cover</code> to make an image maintain its proportions
+            </p>
+
+            <div class="z-depth-1">
+
+                <div class="padding-half bg-color-white-darken-2" ng-init="imageWidth = 100">
+
+                    This image will always maintain a 16:9 aspect ratio. Use this range control to change the container width.
+
+                    <p class="range-field margin-none padding-top-half">
+                        <input type="range" id="test5" min="0" max="100" value="{{imageWidth}}" ng-model="imageWidth" />
+                    </p>
+
+                </div>
+
+                <div class="valign-wrapper valign-center bg-color-white-darken-4">
+
+                    <div class="" style="width: {{imageWidth}}%; ">
+                        <div class="image-ratio bg-structure-center" style="background-image: url('images/example_1.jpg');"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- end Image ratio example -->
+
+        <div class="horizontal-separator"></div>
+
+        <!-- Image ratio variations -->
+        <div class="col m12">
+
+            <div class="">
+
+                <h4 class="">
+                    Image ratio variations
+                </h4>
+
+                <p>
+                    Change this range input to see how other image ratios behave on container width changes.
+                </p>
+
+                <p class="range-field margin-none padding-top-half" ng-init="colWidths = 100">
+                    <input type="range" id="test5" min="0" max="100" value="{{colWidths}}" ng-model="colWidths" />
+                </p>
+
+                <div class="row">
+
+                    <div class="col s12 m4">
+
+                        <div class="z-depth-1">
+
+                            <div class="padding-half bg-color-white-darken-2">
+                                .image-ratio-1-1;
+                            </div>
+
+                            <div class="valign-wrapper valign-center bg-color-white-darken-4">
+
+                                <div class="" style="width: {{colWidths}}%; ">
+                                    <div class="image-ratio image-ratio-1-1 bg-structure-center" style="background-image: url('images/example_1.jpg');"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col s12 m4">
+
+                        <div class="z-depth-1">
+
+                            <div class="padding-half bg-color-white-darken-2">
+                                .image-ratio-4-3;
+                            </div>
+
+                            <div class="valign-wrapper valign-center bg-color-white-darken-4">
+
+                                <div class="" style="width: {{colWidths}}%; ">
+                                    <div class="image-ratio image-ratio-4-3 bg-structure-center" style="background-image: url('images/example_1.jpg');"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col s12 m4">
+
+                        <div class="z-depth-1">
+
+                            <div class="padding-half bg-color-white-darken-2">
+                                .image-ratio-16-10;
+                            </div>
+
+                            <div class="valign-wrapper valign-center bg-color-white-darken-4">
+
+                                <div class="" style="width: {{colWidths}}%; ">
+                                    <div class="image-ratio image-ratio-16-10 bg-structure-center" style="background-image: url('images/example_1.jpg');"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- end Image ratio variations -->
+
+    </div>
+
+</div>
+<!-- end Image helpers -->
