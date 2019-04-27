@@ -11,21 +11,23 @@ var notify = require('gulp-notify');
 //Browser sync
 var browserSync = require('browser-sync').create();
 gulp.task('browserSync', function () {
-    browserSync.init({
-        server: {
-            baseDir: './'
-        },
-        //Where to start the server
-        startPath: "/web"
-    });
+  browserSync.init({
+    port: 3010,
+    proxy: {
+      target: 'local.classify.com', // original port
+      ws: true // enables websockets
+    },
+    //Where to start the server
+    startPath: "/"
+  });
 });
 
 //Base web dir
-var webDir = './web';
+var webDir = './';
 //HTMLs Base dir
-var htmlDir = './web/templates';
+var htmlDir = './';
 //JSs Base dir
-var jsDir = './web/js';
+var jsDir = './js';
 
 //Folder where we store our LESS files
 var lessDir = './less';
@@ -36,7 +38,7 @@ var lessConfig = {
 };
 
 //Folder where compiled LESS will be (as .css file)
-var targetCSSDir = './web/css';
+var targetCSSDir = './css';
 
 //Compile LESS to CSS3 with vendor prefixes
 gulp.task('css', function () {
